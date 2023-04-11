@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Navbar from "./Components/Navbar";
-import About from "./Components/About";
+// import About from "./Components/About";
 import Alert from "./Components/Alert";
 import Textform from "./Components/Textform";
-import { BrowserRouter,Routes,Route } from "react-router-dom";
+// import { BrowserRouter,Routes,Route } from "react-router-dom";
 
 
 function App() {
@@ -72,14 +72,17 @@ function App() {
 
 
 	return (
-		<BrowserRouter>
+		// <BrowserRouter>
+		<>
 	<Navbar	title="TextUtils"	button={btn} button1={btn1} button2={btn2} mode={darkmode}  togglemode={togglemode} togglemode1={togglemode1} togglemode2={togglemode2}/> 
 		<Alert alert={alrt} />
-			<Routes>
-			<Route  path="/" element={<Textform heading="Enter the text to analyze below" mode={darkmode}  alert={showalert}/>} />
-			<Route  path="about" element={<About heading="About Us" mode={darkmode}/> }/>
-			</Routes>
-		</BrowserRouter>
+		<Textform heading="Enter the text to analyze below" mode={darkmode}  alert={showalert}/>
+			{/* <Routes> */}
+			{/* <Route  path="/" element={} /> */}
+			{/* <Route  path="about" element={<About heading="About Us" mode={darkmode}/> }/> */}
+			{/* </Routes> */}
+		{/* </BrowserRouter> */}
+		</>
   
 	);
 }
